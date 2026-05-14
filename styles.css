@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050810;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+h1,h2,h3,h4 {
+  font-family: 'Syne', sans-serif;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255,215,0,.25), transparent 50%);
+  animation: pulseGlow 6s infinite ease-in-out;
+}
+
+.gold-btn {
+  background: #FFD700;
+  color: black;
+  padding: 14px 28px;
+  font-weight: bold;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+@keyframes pulseGlow {
+  0% { opacity: .4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: .4; transform: scale(1); }
+}
